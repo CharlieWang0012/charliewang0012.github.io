@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>行事曆 App 隱私權政策</title>
+<style>
+  :root{
+    --navy:#0f2557; --orange:#ff8c1a;
+    --ink:#f4f7ff; --muted:#a9bbe0; --card:#173268; --line:rgba(255,255,255,.12);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:linear-gradient(180deg,#0b1c44 0%,var(--navy) 45%,#0b1c44 100%);
+    color:var(--ink); font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    -webkit-text-size-adjust:100%; min-height:100vh; line-height:1.75;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:26px 16px 48px}
+  header{padding:6px 0 22px;border-bottom:1px solid var(--line);margin-bottom:24px}
+  h1{margin:0;font-size:24px;letter-spacing:1px}
+  h1 span{color:var(--orange)}
+  .sub{margin:8px 0 0;color:var(--muted);font-size:13px}
+  h2{font-size:16px;margin:28px 0 10px;color:var(--orange)}
+  p,li{font-size:15px;color:var(--ink)}
+  ul{padding-left:20px}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:16px 0}
+  code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:5px;font-size:13px}
+  a{color:var(--orange)}
+  footer{color:var(--muted);font-size:12px;margin-top:36px;padding-top:16px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>行事曆 App <span>隱私權政策</span></h1>
+    <p class="sub">最後更新：2026 年 9 月 4 日</p>
+  </header>
+
+  <div class="box">
+    <p style="margin:0"><strong>簡短版：</strong>這是一個個人自用的行事曆工具，只有開發者本人使用。它讀寫你自己的 Google 日曆與 Google Tasks，資料只留在你自己的裝置和你自己的 Google 帳戶裡，不會傳送到任何伺服器，也不會提供給任何第三方。</p>
+  </div>
+
+  <h2>一、這個應用程式是什麼</h2>
+  <p>「行事曆」（專案代號 2026-calendar）是一個個人使用的網頁應用程式（PWA），用來檢視與管理使用者自己的 Google 日曆行程與 Google Tasks 待辦事項。它由 Charlie Wang 開發，僅供開發者本人使用，不對外提供服務、不收費、沒有其他使用者。</p>
+
+  <h2>二、我們存取哪些資料</h2>
+  <p>在你透過 Google 授權之後，本應用程式會使用以下 Google API 權限範圍：</p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/calendar</code>：讀取與寫入你的 Google 日曆行程，用於在應用程式中顯示、新增、編輯、刪除行程。</li>
+    <li><code>https://www.googleapis.com/auth/tasks</code>：讀取與寫入你的 Google Tasks，用於顯示與管理待辦事項。</li>
+  </ul>
+  <p>本應用程式不會存取你的電子郵件、聯絡人、雲端硬碟檔案、相片或其他任何 Google 服務資料。</p>
+
+  <h2>三、資料如何被使用與儲存</h2>
+  <ul>
+    <li>行程與待辦資料<strong>只用於在你自己的畫面上顯示與編輯</strong>，不做任何分析、統計或側寫。</li>
+    <li>為了支援離線瀏覽，資料會暫存在<strong>你自己瀏覽器的本機儲存空間</strong>（localStorage）。清除瀏覽器資料即可刪除。</li>
+    <li>本應用程式<strong>沒有後端伺服器</strong>，不會把你的行事曆資料傳送到開發者或任何第三方的伺服器。所有 API 請求都由你的瀏覽器直接對 Google 發出。</li>
+    <li>另有一支在使用者<strong>自己的個人電腦上執行</strong>的排程程式，每天早上讀取當日行程並整理成一則摘要，透過 LINE 傳送給使用者本人。該程式的授權憑證只存在使用者自己的電腦裡。</li>
+  </ul>
+
+  <h2>四、資料分享</h2>
+  <p>本應用程式<strong>不會</strong>將你的資料出售、出租、交換或以任何形式提供給第三方，也不會用於廣告或行銷用途。除了與 Google API 通訊之外，沒有任何對外的資料傳輸。</p>
+
+  <h2>五、資料保留與刪除</h2>
+  <ul>
+    <li>瀏覽器端的快取：清除該網站的瀏覽器資料即可完全刪除。</li>
+    <li>撤銷授權：前往 <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google 帳戶的第三方應用程式存取權頁面</a>，移除本應用程式即可立即終止所有存取權限。</li>
+    <li>你的行程與待辦本身存在你自己的 Google 帳戶中，撤銷授權不會刪除它們。</li>
+  </ul>
+
+  <h2>六、安全性</h2>
+  <p>本應用程式使用 Google 官方的 OAuth 2.0 授權流程，開發者<strong>不會取得也不會儲存你的 Google 密碼</strong>。存取權杖僅暫存於瀏覽器記憶體中，關閉分頁後即失效。</p>
+
+  <h2>七、Google API 服務使用者資料政策</h2>
+  <p>本應用程式對 Google API 所取得資訊的使用與轉移，均遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API 服務使用者資料政策</a>，包括其中的「有限使用」（Limited Use）要求。</p>
+
+  <h2>八、政策變更</h2>
+  <p>本政策如有變更，將直接更新於本頁面，並更新頁首的最後更新日期。</p>
+
+  <h2>九、聯絡方式</h2>
+  <p>如對本政策有任何疑問，請來信：<a href="mailto:charliewang0012@gmail.com">charliewang0012@gmail.com</a></p>
+
+  <footer>
+    行事曆 App（2026-calendar）· 個人自用工具<br>
+    <a href="./calendar-terms.html">服務條款</a> · <a href="./">回連結中心</a>
+  </footer>
+</div>
+</body>
+</html>
