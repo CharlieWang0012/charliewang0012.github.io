@@ -1,0 +1,227 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><title>出國保險懶人包</title><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: one long scroll in three parts (why / 平安險 vs 不便險 / 旅行社 gap), built for phone-width sharing. */
+:root{
+  --bg:#F3F6F8; --surface:#FFFFFF; --ink:#13233F; --muted:#56637A; --line:#DDE4EB;
+  --navy:#13233F; --on-navy:#F3F6F8; --amber:#E8A33D; --on-amber:#13233F;
+  --teal:#1F7F7A; --teal-bg:#DFF1EF; --coral:#B94A33; --coral-bg:#FBE6E0; --amber-bg:#FBEFD6;
+  --font:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1726; --surface:#16233A; --ink:#E9EEF5; --muted:#A3B0C4; --line:#27384F;
+  --navy:#0A1220; --on-navy:#E9EEF5; --amber:#F0B359; --on-amber:#13233F;
+  --teal:#5CC4BC; --teal-bg:#173B3B; --coral:#F08F78; --coral-bg:#43241D; --amber-bg:#3D3016;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1726; --surface:#16233A; --ink:#E9EEF5; --muted:#A3B0C4; --line:#27384F;
+  --navy:#0A1220; --on-navy:#E9EEF5; --amber:#F0B359; --on-amber:#13233F;
+  --teal:#5CC4BC; --teal-bg:#173B3B; --coral:#F08F78; --coral-bg:#43241D; --amber-bg:#3D3016;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.75;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hero{background:var(--navy);color:var(--on-navy);margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:calc(env(safe-area-inset-top,0px) + 2.2rem);padding-bottom:2rem}
+.tag{display:inline-block;background:var(--amber);color:var(--on-amber);font-weight:700;font-size:13px;padding:2px 12px;border-radius:99px;letter-spacing:.06em}
+h1{font-size:clamp(28px,7.5vw,40px);line-height:1.3;font-weight:900;margin:.7rem 0 .6rem;text-wrap:balance}
+h1 em{font-style:normal;color:var(--amber)}
+.hero p{margin:0;max-width:34em;opacity:.88}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.3rem}
+.toc a{color:var(--on-navy);text-decoration:none;border:1px solid rgba(243,246,248,.35);border-radius:99px;padding:5px 14px;font-size:14px}
+.toc a:hover,.toc a:focus-visible{background:var(--amber);color:var(--on-amber);border-color:var(--amber);outline:none}
+section{padding-block:2.2rem 0.4rem}
+h2{font-size:clamp(21px,5.2vw,26px);font-weight:900;line-height:1.35;margin:0 0 .3rem;text-wrap:balance}
+h2 .k{display:block;font-size:13px;font-weight:700;color:var(--teal);letter-spacing:.08em;margin-bottom:2px}
+.sub{color:var(--muted);margin:0 0 1.1rem}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-width:0}
+.card h3{margin:0 0 4px;font-size:16.5px;line-height:1.45}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.fig{font-weight:900;font-size:30px;line-height:1.1;color:var(--ink)}
+.fig small{font-size:14px;font-weight:700;margin-left:2px}
+.fig-l{font-size:13px;color:var(--muted);margin-top:4px}
+.stats{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));margin:1rem 0}
+.stat{border-left:4px solid var(--amber);background:var(--surface);border-radius:0 12px 12px 0;padding:10px 14px;min-width:0}
+.note{background:var(--amber-bg);border-radius:12px;padding:12px 16px;margin:1rem 0;font-size:14.5px}
+.note b{font-weight:700}
+/* layers diagram */
+.layers{display:grid;gap:8px;margin:1rem 0}
+.layer{display:grid;grid-template-columns:104px 1fr;border-radius:12px;overflow:hidden;background:var(--surface);border:1px solid var(--line)}
+.layer .l{padding:12px 10px;font-weight:900;font-size:14.5px;line-height:1.4;display:flex;align-items:center;justify-content:center;text-align:center}
+.layer .r{padding:10px 14px;font-size:14.5px;min-width:0}
+.layer .r b{display:block;font-size:15px}
+.layer .r span{color:var(--muted);font-size:13.5px}
+.L1 .l{background:var(--teal);color:#fff}.L2 .l{background:var(--amber);color:var(--on-amber)}.L3 .l{background:var(--muted);color:var(--bg)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .L1 .l{color:#0E1726}}
+:root[data-theme="dark"] .L1 .l{color:#0E1726}
+/* versus table */
+.tw{overflow-x:auto;border-radius:14px;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px}
+th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-weight:900;font-size:15px}
+thead th{background:var(--navy);color:var(--on-navy)}
+thead th.a{box-shadow:inset 0 -4px 0 var(--teal)}thead th.b{box-shadow:inset 0 -4px 0 var(--amber)}thead th.c{box-shadow:inset 0 -4px 0 var(--muted)}
+tbody th{width:6.5em;color:var(--muted);font-weight:700;font-size:13.5px}
+.y,.n,.m{display:inline-block;font-weight:700;font-size:12.5px;border-radius:99px;padding:0 9px;margin-right:4px;white-space:nowrap}
+.y{background:var(--teal-bg);color:var(--teal)}.n{background:var(--coral-bg);color:var(--coral)}.m{background:var(--amber-bg);color:var(--ink)}
+.cap{font-size:13px;color:var(--muted);margin:.5rem 2px 0}
+.one{background:var(--navy);color:var(--on-navy);border-radius:14px;padding:14px 18px;margin:1rem 0;font-weight:700;font-size:16.5px;text-align:center;text-wrap:balance}
+.one em{font-style:normal;color:var(--amber)}
+ol.steps{list-style:none;padding:0;margin:.6rem 0;display:grid;gap:10px;counter-reset:s}
+ol.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px 12px 52px;position:relative}
+ol.steps li::before{content:counter(s);position:absolute;left:14px;top:12px;width:27px;height:27px;border-radius:50%;background:var(--navy);color:var(--amber);font-weight:900;display:flex;align-items:center;justify-content:center;font-size:14px}
+ol.steps b{font-weight:700}
+footer{padding-block:2rem 3rem;color:var(--muted);font-size:13px}
+footer details{margin-top:.6rem}
+footer summary{cursor:pointer;font-weight:700;color:var(--ink)}
+footer ul{padding-left:1.2em;margin:.5rem 0}
+footer a{color:var(--teal)}
+.cta{background:var(--navy);color:var(--on-navy);border-radius:16px;padding:20px 18px;margin:2rem 0 0;text-align:center}
+.cta p{margin:0 0 .3rem}.cta .who{font-weight:900;font-size:19px}
+.cta .id{font-size:14px;opacity:.85;margin:.6rem 0 0}
+.cta a.btn{display:inline-block;background:var(--amber);color:var(--on-amber);font-weight:900;text-decoration:none;padding:11px 26px;border-radius:99px;margin-top:.6rem;font-size:16px}
+.cta a.btn:focus-visible{outline:3px solid var(--on-navy);outline-offset:2px}
+.sig{color:var(--ink);font-weight:700}
+@media (max-width:420px){.layer{grid-template-columns:84px 1fr}th,td{padding:10px}}
+@media (prefers-reduced-motion:no-preference){.toc a{transition:background .15s,color .15s}}
+</style>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">出國前先看</span>
+  <h1>出國保險懶人包<br><em>三件事講清楚</em></h1>
+  <p>為什麼一定要保、平安險和不便險差在哪、旅行社附的保險為什麼不夠。可以直接轉給要出國的朋友。</p>
+  <nav class="toc" aria-label="段落">
+    <a href="#why">1 為什麼要保</a><a href="#vs">2 平安險 vs 不便險</a><a href="#agency">3 旅行社保險</a><a href="#check">出發前檢查</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+
+<section id="why">
+  <h2><span class="k">PART 1</span>為什麼出國一定要有綜合保險</h2>
+  <p class="sub">風險在國外，帳單也在國外。保險把突然冒出來的大筆花費，換成一筆固定的保費。</p>
+
+  <div class="grid">
+    <div class="card"><h3>國外醫療費很高</h3><p>在國外就醫多半要自費先付，金額和台灣健保完全不同。國內旅遊的醫療保額，不能直接沿用到國外。</p></div>
+    <div class="card"><h3>救援與轉送更貴</h3><p>醫療轉送、包機遣返、家屬探視這類急難支援，自己處理幾乎負擔不起。</p></div>
+    <div class="card"><h3>行程出狀況沒人補</h3><p>班機延誤、行李沒到、行程被迫取消，損失只能自己吸收，除非有不便險。</p></div>
+  </div>
+
+  <div class="stats" aria-label="常見數字">
+    <div class="stat"><div class="fig">800<small>萬+</small></div><div class="fig-l">日本腦動脈瘤破裂 10 天花費（經濟日報 2026/10/18 報導）</div></div>
+    <div class="stat"><div class="fig">500~1,000<small>萬</small></div><div class="fig-l">海外平安險常見建議保額，視個人責任調整</div></div>
+    <div class="stat"><div class="fig">4<small>小時</small></div><div class="fig-l">班機延誤不便險常見門檻（依方案）</div></div>
+    <div class="stat"><div class="fig">3<small>萬歐元</small></div><div class="fig-l">申根短期簽證申請時的旅遊醫療保險要求；免簽旅客仍依行程評估保額</div></div>
+  </div>
+
+  <div class="note"><b>三個常被忽略的規定：</b>部分保單會排除投保前一定期間內曾就醫或用藥的疾病，期間與認定方式依條款為準（不要假設各家都一樣）；慢性病或既往病史，出發前一定要向保險公司確認。回台灣才治療的費用通常不賠。投保要在出發前，保期涵蓋從住家出門到回到住家。</div>
+</section>
+
+<section id="vs">
+  <h2><span class="k">PART 2</span>平安險和不便險，差在哪</h2>
+  <p class="sub">報價單常常是「旅平險＋不便險」一起賣，但兩個保的東西完全不同。</p>
+
+  <div class="one">平安險顧<em>人</em>，不便險顧<em>行程</em></div>
+
+  <div class="tw" role="region" aria-label="平安險與不便險比較" tabindex="0">
+  <table>
+    <thead><tr><th></th><th class="a">旅遊平安險（含醫療）</th><th class="b">旅遊不便險</th></tr></thead>
+    <tbody>
+      <tr><th>保的是</th><td>你的身體：受傷、生病、身故、失能</td><td>你的行程和物品：時間與財物損失</td></tr>
+      <tr><th>常見項目</th><td>意外身故／失能、傷害醫療、海外突發疾病、門急診、重大燒燙傷、緊急救援（轉送、遣返）</td><td>班機延誤、行李延誤／遺失、旅程取消／更改、旅行文件遺失、信用卡盜刷</td></tr>
+      <tr><th>怎麼賠</th><td>身故失能多為定額；醫療多為實支實付，在上限內</td><td>多依延誤時數或實際損失，在方案上限內補償</td></tr>
+      <tr><th>什麼時候賠</th><td>在國外受傷或突發疾病，並符合條款（部分保單有投保前就診的排除條款）</td><td>達到時數門檻（依方案而異，常見班機延誤約 4 小時起、行李延誤約 6 小時起）或事件發生</td></tr>
+      <tr><th>要準備</th><td>診斷書、醫療收據</td><td>航空公司延誤／遺失證明、購票證明；被偷被搶要報案證明</td></tr>
+      <tr><th>沒有的話</th><td>醫療與救援費自己付，是最大的風險缺口</td><td>損失自己吸收，單筆通常比醫療小，但很常發生</td></tr>
+      <tr><th>比價看</th><td>醫療保額要先對齊，有沒有含法定傳染病</td><td>取消／更改有沒有排除傳染病與檢疫，延誤是不是累進式</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">表格可左右滑動。實際項目與額度依各家方案與條款為準。</p>
+
+  <h3 style="margin:1.6rem 0 .5rem;font-size:17px">遇到這些事，找哪一個？</h3>
+  <div class="tw" role="region" aria-label="情境配對" tabindex="0">
+  <table>
+    <thead><tr><th>情境</th><th class="a">平安險／醫療</th><th class="b">不便險</th></tr></thead>
+    <tbody>
+      <tr><th>國外突然急診住院</th><td><span class="y">✔ 賠</span>海外突發疾病</td><td><span class="n">✘ 不賠</span></td></tr>
+      <tr><th>騎車摔傷、骨折</th><td><span class="y">✔ 賠</span>傷害醫療</td><td><span class="n">✘ 不賠</span></td></tr>
+      <tr><th>需要醫療專機轉送回國</th><td><span class="y">✔ 賠</span>緊急救援，先通報再處理</td><td><span class="n">✘ 不賠</span></td></tr>
+      <tr><th>班機延誤 5 小時</th><td><span class="n">✘ 不賠</span></td><td><span class="y">✔ 賠</span>達方案門檻</td></tr>
+      <tr><th>行李被航空公司弄丟</th><td><span class="n">✘ 不賠</span></td><td><span class="y">✔ 賠</span>要航空公司證明</td></tr>
+      <tr><th>行李箱摔壞</th><td><span class="n">✘ 不賠</span></td><td><span class="m">多半不賠</span>通常不在保障內</td></tr>
+      <tr><th>護照遺失補辦</th><td><span class="n">✘ 不賠</span></td><td><span class="y">✔ 賠</span>文件遺失項目</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="agency">
+  <h2><span class="k">PART 3</span>旅行社的保險，為什麼不夠</h2>
+  <p class="sub">跟團不代表已經有完整保障。旅行社投保的，和你個人需要的，是兩件事。</p>
+
+  <div class="layers" role="img" aria-label="三層保障示意：底層個人醫療平安險，中層個人不便險，外層旅行社與信用卡的有限保障">
+    <div class="layer L3"><div class="l">旅行社<br>信用卡</div><div class="r"><b>有條件、額度有限</b><span>旅行社有責任才賠；信用卡多限搭乘公共運輸期間</span></div></div>
+    <div class="layer L2"><div class="l">不便險</div><div class="r"><b>行程與財物</b><span>延誤、行李、取消更改、文件遺失</span></div></div>
+    <div class="layer L1"><div class="l">平安險<br>醫療</div><div class="r"><b>最底層，最重要</b><span>突發疾病、意外醫療、身故失能、緊急救援</span></div></div>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h3>責任險看「誰有錯」</h3><p>旅行社責任險保的是旅行社對旅客的責任。通常要事故歸責於旅行社才賠，而且額度有限，不是你個人的醫療與意外保障。</p></div>
+    <div class="card"><h3>履約保險保的是團費</h3><p>旅行社另外要投保的履約保證保險，是在旅行社倒閉或無法履約時保障團費，不處理你的醫療費。</p></div>
+    <div class="card"><h3>自由行完全沒有</h3><p>機加酒、自由行不在旅行社的團體行程內，旅行社的保險不適用，更需要自己投保。</p></div>
+    <div class="card"><h3>信用卡附贈也有限</h3><p>多要用該卡付費，且常限於搭乘公共運輸期間，通常不含全程意外與海外突發疾病醫療。</p></div>
+  </div>
+
+  <h3 style="margin:1.6rem 0 .5rem;font-size:17px">三種保障對照</h3>
+  <div class="tw" role="region" aria-label="個人保險、旅行社、信用卡對照" tabindex="0">
+  <table>
+    <thead><tr><th></th><th class="a">個人旅平險＋不便險</th><th class="c">旅行社責任險</th><th class="c">信用卡附贈</th></tr></thead>
+    <tbody>
+      <tr><th>誰的保障</th><td>你自己，依事故事實給付</td><td>旅行社對旅客的責任，需有責任歸屬</td><td>持卡人，需符合刷卡條件</td></tr>
+      <tr><th>海外突發疾病醫療</th><td><span class="y">✔ 依方案</span></td><td><span class="n">✘ 通常沒有</span></td><td><span class="n">✘ 通常沒有</span></td></tr>
+      <tr><th>班機、行李不便</th><td><span class="y">✔ 依方案</span></td><td><span class="n">✘ 通常沒有</span></td><td><span class="m">依卡片而定</span></td></tr>
+      <tr><th>急難救援</th><td><span class="y">✔ 依方案</span></td><td><span class="m">有限</span></td><td><span class="m">依卡片而定</span></td></tr>
+      <tr><th>自由行適用</th><td><span class="y">✔ 適用</span></td><td><span class="n">✘ 不適用</span></td><td><span class="m">視付費條件</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">旅行社與信用卡的實際內容各家不同，請在出發前向旅行社與發卡銀行索取保單或條款確認。</p>
+</section>
+
+<section id="check">
+  <h2><span class="k">CHECKLIST</span>出發前，做這三件事</h2>
+  <ol class="steps">
+    <li><b>先看目的地，再決定醫療保額。</b>歐美、日本醫療費高，額度要拉高；東南亞確認有包含法定傳染病；申根簽證的保險要求（3 萬歐元）是簽證申請條件，免簽旅客不必然要達到此額度，仍應依行程與醫療需求評估。</li>
+    <li><b>醫療保額對齊，才比保費。</b>便宜常常只是保得比較少。價差多半出在不便險、救援和責任險的額度。</li>
+    <li><b>跟團也要問清楚。</b>向旅行社要保單，確認保障對象、額度和理賠條件；不夠的部分，用個人保險補上。長輩、小孩同行或有高風險活動，額度要再提高。</li>
+  </ol>
+</section>
+
+<div class="cta">
+  <p>想知道你這趟要怎麼配？</p>
+  <p class="who">保險王教官</p>
+  <p>告訴我目的地、日期、同行人數</p>
+  <a class="btn" href="https://line.me/R/ti/p/@898jgofe" target="_blank" rel="noopener">加 LINE 問教官</a>
+  <p class="id">LINE ID：@898jgofe</p>
+</div>
+
+</main>
+
+<footer><div class="wrap">
+  <p class="sig">保險王教官｜保險經紀人業務員｜LINE @898jgofe</p>
+  <p>本頁為一般保險觀念整理，不是商品建議。實際承保範圍、除外責任、年齡限制與理賠，以各家保單條款與核保為準。</p>
+  <details>
+    <summary>資料來源與說明</summary>
+    <ul>
+      <li>保險經紀人整理的出國保障比較與理賠觀念文章（保險王教官知識庫）。</li>
+      <li>經濟日報 2026/10/18 報導：40 多歲男子在日本腦動脈瘤破裂，10 天花逾 800 萬元。</li>
+      <li>公開網路資料：台灣人壽、富邦人壽、富邦產險、國泰產險、中國人壽、泛亞等保險業者與保險科技網站的出國保險說明，用於保額、延誤門檻與申根規範的一般性參考。數字會因商品而異。</li>
+      <li>旅行社責任險與履約保險的說明為一般性整理，詳細額度以旅行社所投保的保單為準。</li>
+    </ul>
+  </details>
+</div></footer>
+
+</body></html>
